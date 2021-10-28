@@ -1,14 +1,22 @@
 {
   "name": "express-dev-skills-lab",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "express lab 1 & 2",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type": "module",
+    "start": "node ./bin/www.js"
   },
-  "author": "",
+  "author": "Aisha Lugg",
+  "type": "module",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "cookie-parser": "^1.4.5",
+    "debug": "^4.3.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0"
   }
 }
