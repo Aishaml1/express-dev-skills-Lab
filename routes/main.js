@@ -4,8 +4,9 @@ const router = Router()
 
 //localhost:3000/ (main page)
 router.get('/', function(req, res, next){
-res.render('main',{title:'Building Skills'})
+res.render('main', {Question:'What Are Your Skills ?'})
 })
+
 
 export{
     router
