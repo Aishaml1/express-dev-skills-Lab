@@ -7,6 +7,7 @@
     <title>Skills Here</title>
 </head>
 <body>
+<a href = "/">home</a>
 <h1> skills </h1>
 <% if(error) { %>
     <h2><%= error %></h2>
@@ -18,7 +19,6 @@
             - 
             <%= skill.learned ? '✔️' : '🚫' %>
         </li>
-    
     
     <%})%>
 </ul>
