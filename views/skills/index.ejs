@@ -7,22 +7,30 @@
     <title>Skills Here</title>
 </head>
 <body>
-<a href = "/">home</a>
-<h1> skills </h1>
+
+<h1>Skills <%= time %></h1>
+
 <% if(error) { %>
-    <h2><%= error %></h2>
+<h2><%= error %></h2>
 <% } %>
 <ul>
-    <% skills.forEach(function(skill) { %>
-        <li>
-            <%= skill.type %> 
-            - 
-            <%= skill.learned ? '✔️' : '🚫' %>
-        </li>
-    
-    <%})%>
-</ul>
-
-    
+<% skills.forEach(function(skill) { %>
+<li>
+    <form 
+    action="/skills/<%= skill._id %>?_method=DELETE"
+    class="delete-form"
+    method="POST"
+    >
+    <button type="submit">x</button>
+    </form>
+    <li>
+    <a href="/skills/<%= skill._id %>"><%= skill.text %></a>
+    - 
+    <%= skill.learned ? '✔️' : '❌' %>
+    </li>
+    <% }) %>
+    </ul>
+    <a href="/skills/new">Add your skill</a>
+  </body>
 </body>
 </html>

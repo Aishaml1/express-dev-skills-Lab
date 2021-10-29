@@ -1,4 +1,5 @@
 //HTTP REQUEST
+//evaluate path of http request- foward that req to the appropiate ctrl
 import { Router } from 'express'
 const router = Router()
 
