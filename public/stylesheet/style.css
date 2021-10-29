@@ -1,0 +1,8 @@
+ul{
+list-style: none;
+
+}
+button{
+    background-color: rgb(165, 42, 42);
+    display: inline-block;
+}

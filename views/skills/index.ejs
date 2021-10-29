@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheet/style.css">
     <title>Skills Here</title>
 </head>
-<body>
+<body style= 'background-color: rgb(211, 146, 8); font-size: 20px;' >
 
-<h1>Skills <%= time %></h1>
+<h1>Skills at <%= time %></h1>
+
+<a href="/"> go back</a>
 
 <% if(error) { %>
 <h2><%= error %></h2>
@@ -19,18 +22,18 @@
     <form 
     action="/skills/<%= skill._id %>?_method=DELETE"
     class="delete-form"
-    method="POST"
-    >
+    method="POST">
     <button type="submit">x</button>
     </form>
+    
     <li>
     <a href="/skills/<%= skill._id %>"><%= skill.text %></a>
     - 
-    <%= skill.learned ? '✔️' : '❌' %>
+    <%= skill.learned ? '✔️' : '🚫' %>
     </li>
     <% }) %>
     </ul>
     <a href="/skills/new">Add your skill</a>
-  </body>
+</body>
 </body>
 </html>

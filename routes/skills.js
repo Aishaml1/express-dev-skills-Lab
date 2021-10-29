@@ -14,6 +14,7 @@ router.get('/new', skillsCtrl.new)
 // localhost:3000/index/id (786578)
 router.get('/:id', skillsCtrl.show)
 // new skill posted on localhost:3000/skills
+//** post and delete (redirect) */
 router.post('/', skillsCtrl.create)
 router.delete('/:id', skillsCtrl.delete)
 
